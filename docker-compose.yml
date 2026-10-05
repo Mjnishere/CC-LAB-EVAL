@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+  student-service:
+    build: ./student-service
+    ports:
+      - "5001:5001"
+    networks:
+      - fest-network
+
+  event-service:
+    build: ./event-service
+    ports:
+      - "5002:5002"
+    networks:
+      - fest-network
+
+  registration-service:
+    build: ./registration-service
+    ports:
+      - "5003:5003"
+    environment:
+      - STUDENT_SERVICE_URL=http://student-service:5001
+      - EVENT_SERVICE_URL=http://event-service:5002
+    depends_on:
+      - student-service
+      - event-service
+    networks:
+      - fest-network
+
+networks:
+  fest-network:
+    driver: bridge
