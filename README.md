@@ -9,14 +9,14 @@ A 3-tier containerized microservices application developed for the Cloud Computi
 
 ---
 
-## 📑 Documentation
+## Documentation
 - **Full Lab Report:** See [`LAB_REPORT.md`](LAB_REPORT.md) for detailed theory, checkpoint walkthroughs, evaluation tables, and professor defense points.
 - **Empirical Observations:** See [`results/observations.md`](results/observations.md) for live benchmark values.
 - **Implementation Plan:** See [`implementation_plan.md`](implementation_plan.md).
 
 ---
 
-## 🏛 System Architecture
+## System Architecture
 
 ```
                        [ Client / k6 Load Generator ]
@@ -43,7 +43,7 @@ A 3-tier containerized microservices application developed for the Cloud Computi
 
 ---
 
-## 🚀 Quickstart
+## Quickstart
 
 ### 1. Prerequisites
 - Docker & Docker Compose
@@ -101,7 +101,7 @@ docker stats --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}"
 
 ---
 
-## 📈 Performance Results
+##  Performance Results
 
 Measured during live evaluation:
 
@@ -123,7 +123,7 @@ Measured during live evaluation:
 
 ---
 
-## 🛑 Tear Down
+## Tear Down
 To stop and remove containers and networks:
 ```bash
 docker compose down
